@@ -1,0 +1,3 @@
+/home/neron/Projects/3d game engine/build/CMakeFiles/out.dir
+/home/neron/Projects/3d game engine/build/CMakeFiles/edit_cache.dir
+/home/neron/Projects/3d game engine/build/CMakeFiles/rebuild_cache.dir
