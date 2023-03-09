@@ -29,6 +29,8 @@ const PosColorVertex vertices[] =
 
 const u16 indices[] = {0, 1, 2, 1, 3, 2};
 
+void cameraMove(Camera &camera);
+Input input;
 int main()
 {
     Window::init();
@@ -36,7 +38,7 @@ int main()
     Window window({800, 600}, "Hello, world");
     window.makeCurrent();
 
-    Input input(window);
+    input.init(window);
     GPU gpu;
 
     glm::vec3 clear_color(0.8, 0.78, 0.5);
@@ -50,29 +52,18 @@ int main()
 
     ProgramHandle basic = gpu.createProgram("../Engine/GPU/Shaders/Shaders/basic.vert", "../Engine/GPU/Shaders/Shaders/basic.frag");
 
-    VertexBufferHandle vbo = gpu.createVertexBuffer(vertices, sizeof(vertices));
-    IndexBufferHandle ibo = gpu.createIndexBuffer(indices, sizeof(indices));
-    VertexArrayHandle vao = gpu.createVeretxArray();
+    Model m = Resource::loadModel("model.dae");
 
-    VertexLayout layout;
-    layout.add(Attrib::Location::POSITION, DataType::FLOAT, 3)
-        .add(Attrib::Location::COLOR0, DataType::UNSIGNED_BYTE, 4, true)
-        .add(Attrib::Location::TEX_COORD0, DataType::FLOAT, 2);
-
-    vao->linkIndexBuffer(ibo);
-    vao->linkAttribs(vbo, layout, true);
-
-    TextureHandle texture = gpu.createTexture("w1.jpg");
-    texture->filter(Filter::LINEAR);
+    VertexArrayHandle vao = gpu.loadMesh(m.meshes[0]);
+    TextureHandle texture = gpu.createTexture(m.meshes[0].texture_path, 4);
+    texture->filter(Filter::LINEAR_MIPMAP_LINEAR);
 
     Camera camera;
     camera.perspective(glm::radians(45.0f), window.getAspect(), 0.01f, 100.0f);
     camera.transform.origin = {0, 0, -5};
 
-    Resource::loadModel("");
-
     Transform model;
-    glm::vec3 rotation(0);
+    model.rotateX(glm::radians(90.0f));
     while (not window.shouldClose())
     {
         input.update();
@@ -80,7 +71,10 @@ int main()
         if (input.getKeyDown(GLFW_KEY_ESCAPE))
             break;
 
-        model.rotate(glm::radians(0.4f), glm::vec3(1, 1, 0));
+        if (input.getKeyDown(GLFW_KEY_R))
+            model.rotate(glm::radians(0.4f), glm::vec3(1, 1, 0));
+
+        cameraMove(camera);
 
         // renderind
         window.updateSize();
@@ -109,4 +103,35 @@ int main()
     gui::cleanup();
     window.destroy();
     Window::cleanup();
+}
+
+void cameraMove(Camera &camera)
+{
+    if (not input.getMouseButtonDown(GLFW_MOUSE_BUTTON_RIGHT))
+    {
+        input.enableCursor();
+        return;
+    }
+    input.disableCursor();
+    
+    float sensetivity = 0.005f;
+    float speed = 0.05f;
+
+    glm::vec2 offset = input.getCursorOffset();
+    camera.transform.rotate(offset.y * sensetivity, glm::vec3(1, 0, 0));
+    camera.transform.rotateY(offset.x * sensetivity);
+
+    glm::vec3 tr(0);
+    if (input.getKeyDown(GLFW_KEY_W))
+        tr += glm::vec3(0, 0, 1);
+    if (input.getKeyDown(GLFW_KEY_S))
+        tr += glm::vec3(0, 0, -1);
+    if (input.getKeyDown(GLFW_KEY_A))
+        tr += glm::vec3(-1, 0, 0);
+    if (input.getKeyDown(GLFW_KEY_D))
+        tr += glm::vec3(1, 0, 0);
+
+    if (tr != glm::vec3(0))
+        camera.transform.translate(glm::normalize(tr) * speed);
+
 }

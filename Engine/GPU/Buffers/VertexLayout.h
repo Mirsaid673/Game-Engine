@@ -17,8 +17,9 @@ public:
 
     VertexLayout &add(const Attrib &attrib);
     VertexLayout &add(Attrib::Location l,
+                      u8 comp_count = 3,
                       DataType t = DataType::FLOAT,
-                      u8 comp_count = 3, bool norm = false);
+                      bool norm = false);
 
     u8 getCount() const { return count; }
 

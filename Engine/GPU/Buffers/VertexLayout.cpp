@@ -1,6 +1,6 @@
 #include "VertexLayout.h"
 
-VertexLayout &VertexLayout::add(const Attrib& attrib)
+VertexLayout &VertexLayout::add(const Attrib &attrib)
 {
     attribs[count] = attrib;
     count++;
@@ -8,7 +8,7 @@ VertexLayout &VertexLayout::add(const Attrib& attrib)
     return *this;
 }
 
-VertexLayout &VertexLayout::add(Attrib::Location l, DataType t, u8 comp_count, bool norm)
+VertexLayout &VertexLayout::add(Attrib::Location l, u8 comp_count, DataType t, bool norm)
 {
     attribs[count].location = l;
     attribs[count].data_type = t;

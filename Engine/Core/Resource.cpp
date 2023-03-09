@@ -62,7 +62,7 @@ namespace Resource
 
     Model loadModel(const std::string &path)
     {
-        scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenNormals);
+        scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenNormals | aiProcess_FlipUVs);
         if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
         {
             Log::error("could not load file: \"{}\"", path);
@@ -106,8 +106,8 @@ namespace Resource
             result.normals.push_back(normal);
 
             glm::vec2 tex_coord;
-            tex_coord.x = mesh->mTextureCoords[0]->x;
-            tex_coord.y = mesh->mTextureCoords[0]->y;
+            tex_coord.x = mesh->mTextureCoords[0][i].x;
+            tex_coord.y = mesh->mTextureCoords[0][i].y;
             result.tex_coords0.push_back(tex_coord);
         }
 
@@ -130,7 +130,7 @@ namespace Resource
         return result;
     }
 
-    /*  void loadTextures(aiMaterial *material, aiTextureType type)
+    /*void loadTextures(aiMaterial *material, aiTextureType type)
      {
          for (u32 i = 0; i < material->GetTextureCount(type); i++)
          {

@@ -33,11 +33,12 @@ private:
 
 public:
     Attrib() = default;
-    Attrib(Location l, DataType t = DataType::FLOAT,
-              u8 comp_count = 3, bool norm = false) : location(l),
-                                                      data_type{t},
-                                                      component_count(comp_count),
-                                                      normalized(norm) {}
+    Attrib(Location l, u8 comp_count = 3,
+           DataType t = DataType::FLOAT,
+           bool norm = false) : location(l),
+                                component_count(comp_count),
+                                data_type{t},
+                                normalized(norm) {}
 
 public:
     Location getLocation() const { return location; }
@@ -47,15 +48,15 @@ public:
     u8 getSize() const
     {
         static const u8 sizes[(u8)DataType::COUNT] =
-        {
-            1, // byte
-            1, // unsigned byte
-            2, // short
-            2, // unsigned short
-            4, // int
-            4, // unsigned int
-            4, // float
-        };
+            {
+                1, // byte
+                1, // unsigned byte
+                2, // short
+                2, // unsigned short
+                4, // int
+                4, // unsigned int
+                4, // float
+            };
         return getCount() * sizes[(u8)data_type];
     }
 

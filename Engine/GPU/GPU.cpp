@@ -78,18 +78,18 @@ void GPU::destroy(ProgramHandle program)
 
 //=======textures========
 
-TextureHandle GPU::createTexture(const Image &image, Format internal_format)
+TextureHandle GPU::createTexture(const Image &image, u8 mip_maps_count, Format internal_format)
 {
-    textures.emplace_back(image, internal_format);
+    textures.emplace_back(image, mip_maps_count, internal_format);
     return &textures.back();
 }
 
-TextureHandle GPU::createTexture(const std::string &image_path)
+TextureHandle GPU::createTexture(const std::string &image_path, u8 mip_maps_count)
 {
     Image image = Resource::loadImage(image_path);
-    textures.emplace_back(image);
+    textures.emplace_back(image, mip_maps_count);
     Resource::freeImage(image);
-    
+
     return &textures.back();
 }
 
@@ -97,6 +97,24 @@ void GPU::destroy(TextureHandle texture)
 {
     textures.remove(*texture);
     texture->destroy();
+}
+
+// mesh
+#include "Log.h"
+VertexArrayHandle GPU::loadMesh(const Mesh &mesh)
+{
+    VertexArrayHandle res = createVeretxArray();
+
+    VertexBufferHandle pos = createVertexBuffer(mesh.positions.data(), mesh.positions.size() * sizeof(glm::vec3));
+    res->linkAttribs(pos, {Attrib::Location::POSITION});
+
+    VertexBufferHandle tex_coord = createVertexBuffer(mesh.tex_coords0.data(), mesh.tex_coords0.size() * sizeof(glm::vec2));
+    res->linkAttribs(tex_coord, {{Attrib::Location::TEX_COORD0, 2}});
+
+    IndexBufferHandle ibo = createIndexBuffer(mesh.indices.data(), mesh.indices.size() * sizeof(u32));
+    res->linkIndexBuffer(ibo);
+
+    return res;
 }
 
 //=======================

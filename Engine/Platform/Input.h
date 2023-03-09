@@ -24,6 +24,7 @@ private:
 public:
     static void updateInput();
 
+    Input() = default;
     Input(const Window &_window) { init(_window); }
 
     void init(const Window &_window);

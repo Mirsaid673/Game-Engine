@@ -3,6 +3,7 @@
 #include "Buffers/VertexArray.h"
 #include "Shaders/Program.h"
 #include "Textures/Texture.h"
+#include "Core/Mesh.h"
 #include <list>
 
 class GPU
@@ -40,10 +41,13 @@ public:
     void destroy(ProgramHandle program);
 
     // textures
-    TextureHandle createTexture(const Image &image, Format internal_format = Format::COUNT);
-    TextureHandle createTexture(const std::string &image_path);
+    TextureHandle createTexture(const Image &image, u8 mip_maps_count = 0, Format internal_format = Format::COUNT);
+    TextureHandle createTexture(const std::string &image_path, u8 mip_maps_count = 0);
 
     void destroy(TextureHandle texture);
+
+    // mesh
+    VertexArrayHandle loadMesh(const Mesh &mesh);
 
     GPU() = default;
     ~GPU();

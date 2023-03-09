@@ -15,9 +15,9 @@ private:
 
 public:
     Texture() = default;
-    Texture(const Image &image, Format internal_format = Format::COUNT);
+    Texture(const Image &image, u8 mip_maps_count = 0, Format internal_format = Format::COUNT);
 
-    void create(const Image &image, Format internal_format = Format::COUNT);
+    void create(const Image &image, u8 mip_maps_count = 0, Format internal_format = Format::COUNT);
     void destroy();
 
     void bind() const;

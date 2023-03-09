@@ -2,17 +2,18 @@
 
 #include "GLenums.h"
 
-Texture::Texture(const Image &image,Format internal_format)
+Texture::Texture(const Image &image, u8 mip_maps_count, Format internal_format)
 {
-    create(image, internal_format);
+    create(image, mip_maps_count, internal_format);
 }
 
-void Texture::create(const Image &image, Format internal_format)
+void Texture::create(const Image &image, u8 mip_maps_count, Format internal_format)
 {
     width = image.width;
     height = image.height;
+    mip_maps = mip_maps_count;
 
-    if(internal_format == Format::COUNT)
+    if (internal_format == Format::COUNT)
         internal_format = image.format + Format::NON_SIZED_COUNT;
 
     glGenTextures(1, &id);
@@ -44,7 +45,7 @@ void Texture::filter(Filter f) const
     bind();
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL::translate(f));
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL::translate(f));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL::translate(Filter((u8)f & (u8)Filter::NO_MIPMAP_MASK)));
 
     unbind();
 }
