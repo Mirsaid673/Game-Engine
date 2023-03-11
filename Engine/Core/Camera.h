@@ -17,7 +17,7 @@ public:
 
     glm::mat4 getProjection() const { return proj; }
     glm::mat4 getView() const { return glm::inverse(transform.getMatrix()); }
-    glm::mat4 getPV() const { return getProjection() * getView(); }
+    glm::mat4 getVP() const { return getProjection() * getView(); }
 
-    glm::mat4 operator*(const Transform &tr) { return getPV() * tr.getMatrix(); }
+    glm::mat4 operator*(const Transform &tr) { return getVP() * tr.getMatrix(); }
 };

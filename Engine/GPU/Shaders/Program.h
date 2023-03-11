@@ -29,8 +29,8 @@ public:
 
     int getUniformLoc(const std::string &name) const;
 
-    void setPVM(const glm::mat4 &PVM) const { setMat4("PVM", PVM); }
-    void setPVM(const glm::mat3 &PVM) const { setMat3("PVM", PVM); }
+    void setMVP(const glm::mat4 &MVP) const { setMat4("MVP", MVP); }
+    void setMVP(const glm::mat3 &MVP) const { setMat3("MVP", MVP); }
 
     template <typename T>
     void setScalar(const std::string &name, T v) const;

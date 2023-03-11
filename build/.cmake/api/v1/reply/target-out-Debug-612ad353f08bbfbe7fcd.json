@@ -134,6 +134,22 @@
 				{
 					"backtrace" : 8,
 					"path" : "/home/neron/Projects/3d game engine/Engine/Vendor"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/neron/Projects/3d game engine/Engine/Vendor/entt"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/neron/Projects/3d game engine/Engine/Vendor/entt/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/neron/Projects/3d game engine/Engine/Vendor/imgui"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/neron/Projects/3d game engine/Engine/Vendor/stb"
 				}
 			],
 			"language" : "CXX",
@@ -148,30 +164,31 @@
 			"sourceIndexes" : 
 			[
 				0,
-				8,
-				11,
-				13,
-				15,
-				17,
+				14,
+				16,
 				20,
 				22,
 				24,
 				26,
-				28,
-				30,
-				32,
-				34,
-				36,
-				38,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
 				41,
 				43,
-				44,
 				45,
 				47,
 				50,
-				51,
-				55,
-				58
+				52,
+				53,
+				54,
+				56,
+				59,
+				60,
+				64,
+				67
 			]
 		}
 	],
@@ -210,17 +227,12 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-lspdlog",
+				"fragment" : "/usr/lib/libspdlog.so.1.11.0",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-lassimp",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "/usr/lib/libspdlog.so.1.11.0",
 				"role" : "libraries"
 			},
 			{
@@ -245,30 +257,31 @@
 			"sourceIndexes" : 
 			[
 				0,
-				8,
-				11,
-				13,
-				15,
-				17,
+				14,
+				16,
 				20,
 				22,
 				24,
 				26,
-				28,
-				30,
-				32,
-				34,
-				36,
-				38,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
 				41,
 				43,
-				44,
 				45,
 				47,
 				50,
-				51,
-				55,
-				58
+				52,
+				53,
+				54,
+				56,
+				59,
+				60,
+				64,
+				67
 			]
 		},
 		{
@@ -282,33 +295,41 @@
 				5,
 				6,
 				7,
+				8,
 				9,
 				10,
+				11,
 				12,
-				14,
-				16,
+				13,
+				15,
+				17,
 				18,
 				19,
 				21,
 				23,
 				25,
 				27,
-				29,
-				31,
-				33,
-				35,
-				37,
-				39,
+				28,
+				30,
+				32,
+				34,
+				36,
+				38,
 				40,
 				42,
+				44,
 				46,
 				48,
 				49,
-				52,
-				53,
-				54,
-				56,
-				57
+				51,
+				55,
+				57,
+				58,
+				61,
+				62,
+				63,
+				65,
+				66
 			]
 		}
 	],
@@ -327,7 +348,42 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Engine/Core/Components/Drawable.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/Components/Material.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/Context.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Engine/Core/Core.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/ECS/ECS.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/ECS/Entity.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/ECS/EntityManager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/ECS/SystemManager.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -338,11 +394,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "Engine/Core/Log.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Engine/Core/Material.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -358,12 +409,28 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "Engine/Core/Node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/Node.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "Engine/Core/Resource.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Engine/Core/Resource.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/Systems/RenderSystem.h",
 			"sourceGroupIndex" : 1
 		},
 		{

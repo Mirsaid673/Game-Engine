@@ -1,13 +1,15 @@
+#include "Context.h"
 #include "Renderer.h"
 #include "Shaders/Program.h"
-#include "GPU.h"
 #include "gui.h"
-#include "Window.h"
-#include "Input.h"
 #include "Log.h"
 #include "Camera.h"
 #include "Resource.h"
 #include "Textures/Texture.h"
+
+#include "Node.h"
+#include "ECS/ECS.h"
+#include "Systems/RenderSystem.h"
 
 struct PosColorVertex
 {
@@ -30,16 +32,16 @@ const PosColorVertex vertices[] =
 const u16 indices[] = {0, 1, 2, 1, 3, 2};
 
 void cameraMove(Camera &camera);
-Input input;
+void drawIerarchy(Node &root);
+
 int main()
 {
     Window::init();
 
-    Window window({800, 600}, "Hello, world");
+    window.create({800, 600}, "Hello, world");
     window.makeCurrent();
 
     input.init(window);
-    GPU gpu;
 
     glm::vec3 clear_color(0.8, 0.78, 0.5);
     Renderer::init();
@@ -54,16 +56,27 @@ int main()
 
     Model m = Resource::loadModel("model.dae");
 
-    VertexArrayHandle vao = gpu.loadMesh(m.meshes[0]);
     TextureHandle texture = gpu.createTexture(m.meshes[0].texture_path, 4);
     texture->filter(Filter::LINEAR_MIPMAP_LINEAR);
 
-    Camera camera;
     camera.perspective(glm::radians(45.0f), window.getAspect(), 0.01f, 100.0f);
     camera.transform.origin = {0, 0, -5};
 
-    Transform model;
+    Node root("root");
+    auto &ch = root.addChild("ch");
+    ch.addChild("bbb");
+    root.addComponent<Mesh>(m.meshes[0]);
+    auto &model = root.addComponent<Transform>();
+    auto &r_c = root.addComponent<Drawable>();
+    auto &m_c = root.addComponent<Material>();
+    m_c.diffuse_texture = texture;
+    m_c.program = basic;
+
     model.rotateX(glm::radians(90.0f));
+
+    RenderSystem::submit();
+
+    system_manager.init();
     while (not window.shouldClose())
     {
         input.update();
@@ -71,30 +84,26 @@ int main()
         if (input.getKeyDown(GLFW_KEY_ESCAPE))
             break;
 
-        if (input.getKeyDown(GLFW_KEY_R))
-            model.rotate(glm::radians(0.4f), glm::vec3(1, 1, 0));
-
         cameraMove(camera);
 
         // renderind
         window.updateSize();
         if (window.resized())
             camera.perspective(glm::radians(45.0f), window.getAspect(), 0.01f, 100.0f);
-        Renderer::setViewport(window.getSize());
         Renderer::clearColor(clear_color);
+        Renderer::setViewport(window.getSize());
         Renderer::clearBuffers();
 
-        basic->use();
-        basic->setPVM(camera * model);
-        texture->use();
-        Renderer::drawVertexArray(vao);
+        system_manager.update();
 
         gui::newFrame();
 
         ImGui::Begin("some window");
         ImGui::ColorPicker3("color", &clear_color.x, ImGuiColorEditFlags_PickerHueWheel | ImGuiColorEditFlags_NoBorder);
-        ImGui::End();
 
+        drawIerarchy(root);
+
+        ImGui::End();
         gui::endFrame();
 
         window.swapBuffers();
@@ -107,13 +116,16 @@ int main()
 
 void cameraMove(Camera &camera)
 {
+    if (ImGui::GetIO().WantCaptureMouse)
+        return;
+
     if (not input.getMouseButtonDown(GLFW_MOUSE_BUTTON_RIGHT))
     {
         input.enableCursor();
         return;
     }
     input.disableCursor();
-    
+
     float sensetivity = 0.005f;
     float speed = 0.05f;
 
@@ -133,5 +145,44 @@ void cameraMove(Camera &camera)
 
     if (tr != glm::vec3(0))
         camera.transform.translate(glm::normalize(tr) * speed);
+}
 
+std::string collapse_title;
+void drawIerarchy(Node &root)
+{
+    if (collapse_title == root.name)
+        ImGui::SetNextTreeNodeOpen(false);
+    bool open = ImGui::TreeNodeEx(root.name.c_str(),
+                                  ImGuiTreeNodeFlags_FramePadding |
+                                      ImGuiTreeNodeFlags_DefaultOpen |
+                                      (root.getChildren().empty() ? ImGuiTreeNodeFlags_Leaf : 0),
+                                  "%s", root.name.data());
+                                  
+    if (ImGui::BeginDragDropTarget())
+    {
+        auto payload = ImGui::AcceptDragDropPayload("Node");
+        if (payload != nullptr)
+        {
+            Node *n = *(Node **)payload->Data;
+            root.addChild(*n);
+        }
+        ImGui::EndDragDropTarget();
+    }
+
+    collapse_title = "";
+    if (ImGui::BeginDragDropSource())
+    {
+        collapse_title = root.name;
+        Node *n = &root;
+        ImGui::SetDragDropPayload("Node", &n, sizeof(Node **), ImGuiCond_Once);
+        ImGui::Text(root.name.c_str());
+        ImGui::EndDragDropSource();
+    }
+
+    if (open)
+    {
+        for (auto &child : root.getChildren())
+            drawIerarchy(child);
+        ImGui::TreePop();
+    }
 }
