@@ -9,16 +9,17 @@
 #include "Context.h"
 #include "Mesh.h"
 #include "Renderer/Renderer.h"
+#include "Scene.h"
+
 namespace RenderSystem
 {
     System Update = []()
     {
-        entt::registry &reg = EntityManager::getRegistry();
-        auto view = reg.view<Drawable, Material, Transform>();
+        auto view = entity_manager.view<Drawable, Material, Transform>();
         for (auto [entity, render_comp, material, transform] : view.each())
         {
             material.program->use();
-            material.program->setMVP(camera * transform);
+            material.program->setMVP(scene.camera->getVP() * transform.getMatrix());
             material.diffuse_texture->use();
             Renderer::drawVertexArray(render_comp.vertex_array);
         }
@@ -26,8 +27,7 @@ namespace RenderSystem
 
     System Init = []()
     {
-        entt::registry &reg = EntityManager::getRegistry();
-        auto view = reg.view<Mesh, Drawable>();
+        auto view = entity_manager.view<Mesh, Drawable>();
 
         for (auto [entity, mesh, drawable] : view.each())
         {
@@ -38,6 +38,6 @@ namespace RenderSystem
     void submit()
     {
         system_manager.addInit(Init);
-        system_manager.addUpdate(Update);
+        system_manager.addDraw(Update);
     }
 }

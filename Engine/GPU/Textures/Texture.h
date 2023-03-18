@@ -8,8 +8,9 @@ class Texture
 public:
 private:
     GLuint id = -1;
-    i32 width;
-    i32 height;
+    u32 width;
+    u32 height;
+    Format format;
     u8 unit = 0;
     u8 mip_maps = 0;
 
@@ -30,10 +31,15 @@ public:
     void setUnit(u8 value) { unit = value; }
     u8 getUnit() const { return unit; }
 
-    i32 getWidth() const { return width; }
-    i32 getHeight() const { return height; }
+    u32 getWidth() const { return width; }
+    u32 getHeight() const { return height; }
+    Format getFormat() const { return format; }
 
     bool operator==(const Texture &other) { return id == other.id; }
+
+    GLuint getID() const { return id; }
+
+    friend class Framebuffer;
 };
 
 using TextureHandle = Texture *;

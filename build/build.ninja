@@ -53,15 +53,15 @@ build CMakeFiles/out.dir/Engine/Core/Camera.cpp.o: CXX_COMPILER__out_Debug /home
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Core/Camera.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Core
 
-build CMakeFiles/out.dir/Engine/Core/Node.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/Core/Node.cpp || cmake_object_order_depends_target_out
+build CMakeFiles/out.dir/Engine/Core/Context.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/Core/Context.cpp || cmake_object_order_depends_target_out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
-  DEP_FILE = CMakeFiles/out.dir/Engine/Core/Node.cpp.o.d
+  DEP_FILE = CMakeFiles/out.dir/Engine/Core/Context.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Core
 
@@ -69,15 +69,23 @@ build CMakeFiles/out.dir/Engine/Core/Resource.cpp.o: CXX_COMPILER__out_Debug /ho
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Core/Resource.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Core
+
+build CMakeFiles/out.dir/Engine/Editor/Editor.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/Editor/Editor.cpp || cmake_object_order_depends_target_out
+  DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
+  DEP_FILE = CMakeFiles/out.dir/Engine/Editor/Editor.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  OBJECT_DIR = CMakeFiles/out.dir
+  OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Editor
 
 build CMakeFiles/out.dir/Engine/GPU/Buffers/IndexBuffer.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/GPU/Buffers/IndexBuffer.cpp || cmake_object_order_depends_target_out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Buffers/IndexBuffer.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Buffers
 
@@ -85,7 +93,7 @@ build CMakeFiles/out.dir/Engine/GPU/Buffers/VertexArray.cpp.o: CXX_COMPILER__out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Buffers/VertexArray.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Buffers
 
@@ -93,7 +101,7 @@ build CMakeFiles/out.dir/Engine/GPU/Buffers/VertexBuffer.cpp.o: CXX_COMPILER__ou
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Buffers/VertexBuffer.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Buffers
 
@@ -101,15 +109,23 @@ build CMakeFiles/out.dir/Engine/GPU/Buffers/VertexLayout.cpp.o: CXX_COMPILER__ou
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Buffers/VertexLayout.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Buffers
+
+build CMakeFiles/out.dir/Engine/GPU/Framebuffers/Framebuffer.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/GPU/Framebuffers/Framebuffer.cpp || cmake_object_order_depends_target_out
+  DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
+  DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Framebuffers/Framebuffer.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  OBJECT_DIR = CMakeFiles/out.dir
+  OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Framebuffers
 
 build CMakeFiles/out.dir/Engine/GPU/GLenums.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/GPU/GLenums.cpp || cmake_object_order_depends_target_out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/GLenums.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU
 
@@ -117,7 +133,7 @@ build CMakeFiles/out.dir/Engine/GPU/GPU.cpp.o: CXX_COMPILER__out_Debug /home/ner
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/GPU.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU
 
@@ -125,7 +141,7 @@ build CMakeFiles/out.dir/Engine/GPU/Shaders/Program.cpp.o: CXX_COMPILER__out_Deb
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Shaders/Program.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Shaders
 
@@ -133,7 +149,7 @@ build CMakeFiles/out.dir/Engine/GPU/Shaders/Shader.cpp.o: CXX_COMPILER__out_Debu
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Shaders/Shader.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Shaders
 
@@ -141,7 +157,7 @@ build CMakeFiles/out.dir/Engine/GPU/Textures/Texture.cpp.o: CXX_COMPILER__out_De
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/GPU/Textures/Texture.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/GPU/Textures
 
@@ -149,7 +165,7 @@ build CMakeFiles/out.dir/Engine/Math/Basis.cpp.o: CXX_COMPILER__out_Debug /home/
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Math/Basis.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Math
 
@@ -157,7 +173,7 @@ build CMakeFiles/out.dir/Engine/Math/Transform.cpp.o: CXX_COMPILER__out_Debug /h
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Math/Transform.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Math
 
@@ -165,7 +181,7 @@ build CMakeFiles/out.dir/Engine/Platform/Input.cpp.o: CXX_COMPILER__out_Debug /h
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Platform/Input.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Platform
 
@@ -173,7 +189,7 @@ build CMakeFiles/out.dir/Engine/Platform/Window.cpp.o: CXX_COMPILER__out_Debug /
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Platform/Window.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Platform
 
@@ -181,7 +197,7 @@ build CMakeFiles/out.dir/Engine/Renderer/Renderer.cpp.o: CXX_COMPILER__out_Debug
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Renderer/Renderer.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Renderer
 
@@ -189,7 +205,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui.cpp.o: CXX_COMPILER__out_Debu
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -197,7 +213,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_demo.cpp.o: CXX_COMPILER__out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_demo.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -205,7 +221,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_draw.cpp.o: CXX_COMPILER__out
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_draw.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -213,7 +229,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_glfw.cpp.o: CXX_COMPILER
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_glfw.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -221,7 +237,15 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_opengl3.cpp.o: CXX_COMPI
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_opengl3.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  OBJECT_DIR = CMakeFiles/out.dir
+  OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
+
+build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_stdlib.cpp.o: CXX_COMPILER__out_Debug /home/neron/Projects/3d$ game$ engine/Engine/Vendor/imgui/imgui_stdlib.cpp || cmake_object_order_depends_target_out
+  DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
+  DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_stdlib.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -229,7 +253,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_tables.cpp.o: CXX_COMPILER__o
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_tables.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -237,7 +261,7 @@ build CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_widgets.cpp.o: CXX_COMPILER__
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_widgets.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/imgui
 
@@ -245,7 +269,7 @@ build CMakeFiles/out.dir/Engine/Vendor/stb/stb_image.cpp.o: CXX_COMPILER__out_De
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/Engine/Vendor/stb/stb_image.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir/Engine/Vendor/stb
 
@@ -253,7 +277,7 @@ build CMakeFiles/out.dir/main.cpp.o: CXX_COMPILER__out_Debug /home/neron/Project
   DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
   DEP_FILE = CMakeFiles/out.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
+  INCLUDES = -I"/home/neron/Projects/3d game engine/Engine" -I"/home/neron/Projects/3d game engine/Engine/Core" -I"/home/neron/Projects/3d game engine/Engine/Editor" -I"/home/neron/Projects/3d game engine/Engine/GPU" -I"/home/neron/Projects/3d game engine/Engine/Math" -I"/home/neron/Projects/3d game engine/Engine/Platform" -I"/home/neron/Projects/3d game engine/Engine/Renderer" -I"/home/neron/Projects/3d game engine/Engine/Vendor" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt" -I"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src" -I"/home/neron/Projects/3d game engine/Engine/Vendor/imgui" -I"/home/neron/Projects/3d game engine/Engine/Vendor/stb"
   OBJECT_DIR = CMakeFiles/out.dir
   OBJECT_FILE_DIR = CMakeFiles/out.dir
 
@@ -265,7 +289,7 @@ build CMakeFiles/out.dir/main.cpp.o: CXX_COMPILER__out_Debug /home/neron/Project
 #############################################
 # Link the executable out
 
-build out: CXX_EXECUTABLE_LINKER__out_Debug CMakeFiles/out.dir/Engine/Core/Camera.cpp.o CMakeFiles/out.dir/Engine/Core/Node.cpp.o CMakeFiles/out.dir/Engine/Core/Resource.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/IndexBuffer.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexArray.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexBuffer.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexLayout.cpp.o CMakeFiles/out.dir/Engine/GPU/GLenums.cpp.o CMakeFiles/out.dir/Engine/GPU/GPU.cpp.o CMakeFiles/out.dir/Engine/GPU/Shaders/Program.cpp.o CMakeFiles/out.dir/Engine/GPU/Shaders/Shader.cpp.o CMakeFiles/out.dir/Engine/GPU/Textures/Texture.cpp.o CMakeFiles/out.dir/Engine/Math/Basis.cpp.o CMakeFiles/out.dir/Engine/Math/Transform.cpp.o CMakeFiles/out.dir/Engine/Platform/Input.cpp.o CMakeFiles/out.dir/Engine/Platform/Window.cpp.o CMakeFiles/out.dir/Engine/Renderer/Renderer.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_demo.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_draw.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_glfw.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_opengl3.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_tables.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_widgets.cpp.o CMakeFiles/out.dir/Engine/Vendor/stb/stb_image.cpp.o CMakeFiles/out.dir/main.cpp.o | /usr/lib/libspdlog.so.1.11.0 /usr/lib/libfmt.so.9.1.0
+build out: CXX_EXECUTABLE_LINKER__out_Debug CMakeFiles/out.dir/Engine/Core/Camera.cpp.o CMakeFiles/out.dir/Engine/Core/Context.cpp.o CMakeFiles/out.dir/Engine/Core/Resource.cpp.o CMakeFiles/out.dir/Engine/Editor/Editor.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/IndexBuffer.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexArray.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexBuffer.cpp.o CMakeFiles/out.dir/Engine/GPU/Buffers/VertexLayout.cpp.o CMakeFiles/out.dir/Engine/GPU/Framebuffers/Framebuffer.cpp.o CMakeFiles/out.dir/Engine/GPU/GLenums.cpp.o CMakeFiles/out.dir/Engine/GPU/GPU.cpp.o CMakeFiles/out.dir/Engine/GPU/Shaders/Program.cpp.o CMakeFiles/out.dir/Engine/GPU/Shaders/Shader.cpp.o CMakeFiles/out.dir/Engine/GPU/Textures/Texture.cpp.o CMakeFiles/out.dir/Engine/Math/Basis.cpp.o CMakeFiles/out.dir/Engine/Math/Transform.cpp.o CMakeFiles/out.dir/Engine/Platform/Input.cpp.o CMakeFiles/out.dir/Engine/Platform/Window.cpp.o CMakeFiles/out.dir/Engine/Renderer/Renderer.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_demo.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_draw.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_glfw.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_impl_opengl3.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_stdlib.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_tables.cpp.o CMakeFiles/out.dir/Engine/Vendor/imgui/imgui_widgets.cpp.o CMakeFiles/out.dir/Engine/Vendor/stb/stb_image.cpp.o CMakeFiles/out.dir/main.cpp.o | /usr/lib/libspdlog.so.1.11.0 /usr/lib/libfmt.so.9.1.0
   FLAGS = -g
   LINK_LIBRARIES = -lGL  -lGLEW  -lglfw  -lfreetype  /usr/lib/libspdlog.so.1.11.0  -lassimp  /usr/lib/libfmt.so.9.1.0
   OBJECT_DIR = CMakeFiles/out.dir

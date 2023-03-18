@@ -3,6 +3,7 @@
 #include "Buffers/VertexArray.h"
 #include "Shaders/Program.h"
 #include "Textures/Texture.h"
+#include "Framebuffers/Framebuffer.h"
 #include "Core/Mesh.h"
 #include <list>
 
@@ -20,6 +21,9 @@ private:
 
     // textures
     std::list<Texture> textures;
+
+    // framebuffers
+    std::list<Framebuffer> framebuffers;
 
 public:
     // buffers
@@ -46,9 +50,13 @@ public:
 
     void destroy(TextureHandle texture);
 
+    // framebuffers
+    FramebufferHandle createFramebuffer(u32 width, u32 height);
+
+    void destroy(FramebufferHandle framebuffer);
+
     // mesh
     VertexArrayHandle loadMesh(const Mesh &mesh);
 
-    GPU() = default;
-    ~GPU();
+    void cleanup();
 };

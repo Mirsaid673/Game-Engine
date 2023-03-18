@@ -19,4 +19,10 @@ public:
     const glm::vec3 &operator[](size_t ind) const { return basis[ind]; }
     operator glm::mat3 &() { return basis; }
     operator glm::mat4() const { return glm::mat4(basis); }
+
+    Basis &operator=(const glm::mat4 &matrix)
+    {
+        basis = glm::mat3(matrix);
+        return *this;
+    }
 };

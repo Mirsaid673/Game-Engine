@@ -23,8 +23,9 @@ void Input::init(const Window &_window)
     cursor_pos = glm::ivec2(x, y);
     cursor_last_pos = cursor_pos;
 
-    glfwSetWindowUserPointer(window, (void*)this);
+    glfwSetWindowUserPointer(window, (void *)this);
     glfwSetScrollCallback(window, mouseScrollCallback);
+    glfwSetCursorPosCallback(window, cursorPosCallback);
     muouse_scroll = 0.0;
 }
 
@@ -39,16 +40,19 @@ void Input::update()
     {
         last_mouse_butons_state[i] = glfwGetMouseButton(window, i);
     }
-
-    double x, y;
-    glfwGetCursorPos(window, &x, &y);
     cursor_last_pos = cursor_pos;
-    cursor_pos = glm::ivec2(x, y);
+    
     muouse_scroll = 0.0;
 }
 
 void Input::mouseScrollCallback(GLFWwindow *wnd, double, double y_offset)
 {
-    Input *self = reinterpret_cast<Input*>(glfwGetWindowUserPointer(wnd));
+    Input *self = reinterpret_cast<Input *>(glfwGetWindowUserPointer(wnd));
     self->muouse_scroll = y_offset;
+}
+
+void Input::cursorPosCallback(GLFWwindow *wnd, double x, double y)
+{
+    Input *self = reinterpret_cast<Input *>(glfwGetWindowUserPointer(wnd));
+    self->cursor_pos = glm::ivec2(x, y);
 }

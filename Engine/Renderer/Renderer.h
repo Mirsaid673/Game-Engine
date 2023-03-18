@@ -18,4 +18,7 @@ namespace Renderer
     void setViewport(const glm::uvec2 &origin, const glm::uvec2 &size);
 
     void drawVertexArray(VertexArrayHandle vao);
+
+    void pushFrambuffer(FramebufferHandle framebuffer);
+    void popFramebuffer();
 }

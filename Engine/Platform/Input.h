@@ -20,6 +20,7 @@ private:
     int muouse_scroll;
 
     static void mouseScrollCallback(GLFWwindow *wnd, double, double y_offset);
+    static void cursorPosCallback(GLFWwindow *wnd, double x, double y);
 
 public:
     static void updateInput();
@@ -50,11 +51,16 @@ public:
     void disableCursor() const
     {
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-        glfwSetCursorPos(window, cursor_pos.x, cursor_pos.y);
     }
     void enableCursor() const
     {
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-        glfwSetCursorPos(window, cursor_pos.x, cursor_pos.y);
+    }
+
+    void setCursorPos(const glm::ivec2& pos)
+    {
+        cursor_last_pos = cursor_pos;
+        cursor_pos = pos;
+        glfwSetCursorPos(window, pos.x, pos.y);
     }
 };

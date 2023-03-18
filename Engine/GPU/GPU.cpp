@@ -99,8 +99,20 @@ void GPU::destroy(TextureHandle texture)
     texture->destroy();
 }
 
-// mesh
-#include "Log.h"
+FramebufferHandle GPU::createFramebuffer(u32 width, u32 height)
+{
+    framebuffers.emplace_back(width, height);
+    return &framebuffers.back();
+}
+
+void GPU::destroy(FramebufferHandle framebuffer)
+{
+    framebuffers.remove(*framebuffer);
+    framebuffer->destroy();
+}
+
+//=======mesh========
+
 VertexArrayHandle GPU::loadMesh(const Mesh &mesh)
 {
     VertexArrayHandle res = createVeretxArray();
@@ -108,8 +120,11 @@ VertexArrayHandle GPU::loadMesh(const Mesh &mesh)
     VertexBufferHandle pos = createVertexBuffer(mesh.positions.data(), mesh.positions.size() * sizeof(glm::vec3));
     res->linkAttribs(pos, {Attrib::Location::POSITION});
 
-    VertexBufferHandle tex_coord = createVertexBuffer(mesh.tex_coords0.data(), mesh.tex_coords0.size() * sizeof(glm::vec2));
-    res->linkAttribs(tex_coord, {{Attrib::Location::TEX_COORD0, 2}});
+    if (mesh.tex_coords0.size() != 0)
+    {
+        VertexBufferHandle tex_coord = createVertexBuffer(mesh.tex_coords0.data(), mesh.tex_coords0.size() * sizeof(glm::vec2));
+        res->linkAttribs(tex_coord, {{Attrib::Location::TEX_COORD0, 2}});
+    }
 
     IndexBufferHandle ibo = createIndexBuffer(mesh.indices.data(), mesh.indices.size() * sizeof(u32));
     res->linkIndexBuffer(ibo);
@@ -118,7 +133,7 @@ VertexArrayHandle GPU::loadMesh(const Mesh &mesh)
 }
 
 //=======================
-GPU::~GPU()
+void GPU::cleanup()
 {
     // destroying buffers
     for (auto &buffer : vertex_buffers)
@@ -140,4 +155,7 @@ GPU::~GPU()
     // textures
     for (auto &texture : textures)
         texture.destroy();
+
+    for (auto &framebuffer : framebuffers)
+        framebuffer.destroy();
 }

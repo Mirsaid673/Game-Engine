@@ -8,6 +8,7 @@ class SystemManager
 private:
     std::list<System> init_systems;
     std::list<System> update_systems;
+    std::list<System> draw_systems;
     std::list<System> destroy_systems;
 
 public:
@@ -21,6 +22,12 @@ public:
         update_systems.emplace_back(s);
     }
 
+    void addDraw(System s)
+    {
+        draw_systems.emplace_back(s);
+    }
+
+//===================
     void init() const
     {
         for (auto system : init_systems)
@@ -30,6 +37,12 @@ public:
     void update() const
     {
         for (auto system : update_systems)
+            system();
+    }
+
+    void draw()
+    {
+        for (auto system : draw_systems)
             system();
     }
 

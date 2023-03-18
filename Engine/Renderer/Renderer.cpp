@@ -3,6 +3,8 @@
 #include "GLenums.h"
 #include "Log.h"
 
+#include <stack>
+
 void glDebugOutput(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *message, const void *userParam);
 
 namespace Renderer
@@ -41,7 +43,6 @@ namespace Renderer
 	}
 
 	GLenum clear_buffers = GL_COLOR_BUFFER_BIT;
-
 	void clearBuffers()
 	{
 		glClear(clear_buffers);
@@ -53,13 +54,16 @@ namespace Renderer
 		clear_buffers |= GL_DEPTH_BUFFER_BIT;
 	}
 
+	glm::uvec2 viewport_size(0);
 	void setViewport(const glm::uvec2 &size)
 	{
+		viewport_size = size;
 		glViewport(0, 0, size.x, size.y);
 	}
 
 	void setViewport(const glm::uvec2 &origin, const glm::uvec2 &size)
 	{
+		viewport_size = size;
 		glViewport(origin.x, origin.y, size.x, size.y);
 	}
 
@@ -68,6 +72,29 @@ namespace Renderer
 		vao->bind();
 		glDrawElements(GL::translate(vao->getPrimitive()), vao->getIndexCount(), GL::translate(vao->getIndexDataType()), 0);
 		vao->unbind();
+	}
+
+	std::stack<FramebufferHandle> fbo_stack;
+	void pushFrambuffer(FramebufferHandle framebuffer)
+	{
+		fbo_stack.push(framebuffer);
+		framebuffer->bind();
+		setViewport(framebuffer->getSize());
+	}
+
+	void popFramebuffer()
+	{
+		fbo_stack.pop();
+
+		if (fbo_stack.empty())
+		{
+			Framebuffer::bindMain();
+			return;
+		}
+
+		FramebufferHandle framebuffer = fbo_stack.top();
+		framebuffer->bind();
+		setViewport(framebuffer->getSize());
 	}
 }
 

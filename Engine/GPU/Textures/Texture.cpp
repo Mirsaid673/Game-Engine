@@ -14,12 +14,12 @@ void Texture::create(const Image &image, u8 mip_maps_count, Format internal_form
     mip_maps = mip_maps_count;
 
     if (internal_format == Format::COUNT)
-        internal_format = image.format + Format::NON_SIZED_COUNT;
+        format = image.format + Format::NON_SIZED_COUNT;
 
     glGenTextures(1, &id);
     bind();
 
-    glTexStorage2D(GL_TEXTURE_2D, 1 + mip_maps, GL::translate(internal_format), width, height);
+    glTexStorage2D(GL_TEXTURE_2D, 1 + mip_maps, GL::translate(format), width, height);
 
     if (image.data != nullptr)
         glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL::translate(image.format), GL::translate(image.data_type), image.data);

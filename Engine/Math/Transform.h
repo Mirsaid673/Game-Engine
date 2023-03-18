@@ -5,17 +5,22 @@
 class Transform
 {
 public:
-    Basis basis;
+    Basis rotation;
     glm::vec3 origin;
+    glm::vec3 scale;
+    Transform *parent = nullptr;
 
-    Transform() : origin(0.0f) {}
+    Transform() : origin(0.0f), scale(1.0f) {}
 
     void translate(const glm::vec3 &v);
 
-    void rotate(float angle, const glm::vec3 &axis) { basis.rotate(angle, axis); }
-    void rotateX(float angle) { basis.rotateX(angle); }
-    void rotateY(float angle) { basis.rotateY(angle); }
-    void rotateZ(float angle) { basis.rotateZ(angle); }
+    void rotate(float angle, const glm::vec3 &axis) { rotation.rotate(angle, axis); }
+    void rotateX(float angle) { rotation.rotateX(angle); }
+    void rotateY(float angle) { rotation.rotateY(angle); }
+    void rotateZ(float angle) { rotation.rotateZ(angle); }
+    
+    void setEulerAngles(const glm::vec3& angles);
+    glm::vec3 getEulerAngles() const;
 
     glm::mat4 getMatrix() const;
 

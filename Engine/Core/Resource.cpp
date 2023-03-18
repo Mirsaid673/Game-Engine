@@ -39,7 +39,7 @@ namespace Resource
     {
         Image image;
         int channels_n;
-        image.data = stbi_load(path.c_str(), &image.width, &image.height, &channels_n, 0);
+        image.data = stbi_load(path.c_str(), (i32*)&image.width, (i32*)&image.height, &channels_n, 0);
         if (image.data == nullptr)
             Log::error("could not read file: \"{}\"", path);
 

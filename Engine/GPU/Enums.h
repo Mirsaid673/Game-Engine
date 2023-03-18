@@ -90,15 +90,3 @@ T operator+(T l, T r)
 {
     return (T)((u8)l + (u8)r);
 }
-
-template <typename T>
-T operator+(u8 l, T r)
-{
-    return (T)(l + (u8)r);
-}
-
-template <typename T>
-T operator+(T l, u8 r)
-{
-    return (T)(u8(l) + r);
-}

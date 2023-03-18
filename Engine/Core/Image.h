@@ -5,8 +5,8 @@
 struct Image
 {
     u8* data;
-    i32 width;
-    i32 height;
+    u32 width;
+    u32 height;
     Format format;
     DataType data_type = DataType::UNSIGNED_BYTE;
 };
