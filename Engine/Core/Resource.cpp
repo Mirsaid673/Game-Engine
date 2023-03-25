@@ -122,9 +122,13 @@ namespace Resource
         {
             aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
 
-            aiString texture_path;
-            material->GetTexture(aiTextureType_DIFFUSE, 0, &texture_path);
-            result.texture_path = texture_path.C_Str();
+            aiString diffuse_path;
+            material->GetTexture(aiTextureType_DIFFUSE, 0, &diffuse_path);
+            result.diffuse_path = diffuse_path.C_Str();
+
+            aiString specular_path;
+            material->GetTexture(aiTextureType_SPECULAR, 0, &specular_path);
+            result.specular_path = specular_path.C_Str();
         }
 
         return result;

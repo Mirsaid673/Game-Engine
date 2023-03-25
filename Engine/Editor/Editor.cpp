@@ -4,6 +4,10 @@
 #include "Components/TransformProperty.h"
 #include "Components/MeshProperty.h"
 #include "Components/CameraProperty.h"
+#include "Components/MaterialProperty.h"
+#include "Components/PointLightProperty.h"
+#include "Components/DirLightProperty.h"
+#include "AddComponent.h"
 
 namespace Editor
 {
@@ -83,7 +87,7 @@ namespace Editor
         {
             if (ImGui::Selectable("add node"))
             {
-                Node& added_node = scene.addNode();
+                Node &added_node = scene.addNode();
                 to_rename = &added_node;
             }
             ImGui::EndPopup();
@@ -127,11 +131,18 @@ namespace Editor
 
         if (auto comp = selected->tryGet<Transform>(); comp != nullptr)
             InspectorDraw(*comp, selected->getEntityID());
+        if (auto comp = selected->tryGet<Material>(); comp != nullptr)
+            InspectorDraw(*comp);
         if (auto comp = selected->tryGet<Mesh>(); comp != nullptr)
             InspectorDraw(*comp);
         if (auto comp = selected->tryGet<Camera>(); comp != nullptr)
             InspectorDraw(*comp);
+        if (auto comp = selected->tryGet<PointLight>(); comp != nullptr)
+            InspectorDraw(*comp);
+        if (auto comp = selected->tryGet<DirLight>(); comp != nullptr)
+            InspectorDraw(*comp);
 
+        addComponent(*selected);
         ImGui::End();
     }
 

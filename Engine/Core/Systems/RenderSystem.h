@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ECS/Entity.h"
-#include "ECS/EntityManager.h"
 
 #include "Components/Drawable.h"
 #include "Components/Material.h"
@@ -16,12 +15,27 @@ namespace RenderSystem
     System Update = []()
     {
         auto view = entity_manager.view<Drawable, Material, Transform>();
-        for (auto [entity, render_comp, material, transform] : view.each())
+        for (auto [entity, drawable, material, transform] : view.each())
         {
             material.program->use();
-            material.program->setMVP(scene.camera->getVP() * transform.getMatrix());
-            material.diffuse_texture->use();
-            Renderer::drawVertexArray(render_comp.vertex_array);
+
+            auto p_view = entity_manager.view<PointLight>();
+            u32 i = 0;
+            for (auto [entity, point_light] : p_view.each())
+            {
+                material.program->setLight("point_lights[" + std::to_string(i) + "]", point_light);
+                i++;
+            }
+            material.program->setScalar("point_lights_count", i);
+
+            auto d_view = entity_manager.view<DirLight>();
+            for (auto [entity, light] : d_view.each())
+                material.program->setLight("dir_light", light);
+
+            material.program->setMVP(scene.camera->getProjection(), scene.camera->getView(), transform.getMatrix());
+            material.program->setMaterial("material", material);
+
+            Renderer::drawVertexArray(drawable.vertex_array);
         }
     };
 

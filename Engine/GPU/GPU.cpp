@@ -120,6 +120,12 @@ VertexArrayHandle GPU::loadMesh(const Mesh &mesh)
     VertexBufferHandle pos = createVertexBuffer(mesh.positions.data(), mesh.positions.size() * sizeof(glm::vec3));
     res->linkAttribs(pos, {Attrib::Location::POSITION});
 
+    if (mesh.normals.size() != 0)
+    {
+        VertexBufferHandle normal = createVertexBuffer(mesh.normals.data(), mesh.normals.size() * sizeof(glm::vec3));
+        res->linkAttribs(normal, {{Attrib::Location::NORMAL}});
+    }
+
     if (mesh.tex_coords0.size() != 0)
     {
         VertexBufferHandle tex_coord = createVertexBuffer(mesh.tex_coords0.data(), mesh.tex_coords0.size() * sizeof(glm::vec2));

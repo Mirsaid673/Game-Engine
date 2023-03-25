@@ -47,7 +47,7 @@ int main()
 
     Model m = Resource::loadModel("model.dae");
 
-    TextureHandle texture = gpu.createTexture(m.meshes[0].texture_path, 4);
+    TextureHandle texture = gpu.createTexture("textures/" + m.meshes[0].diffuse_path, 4);
     texture->filter(Filter::LINEAR_MIPMAP_LINEAR);
 
     VertexArrayHandle screen_q = gpu.createVeretxArray();
@@ -60,9 +60,14 @@ int main()
     root.addComponent<Mesh>(m.meshes[0]);
     root.addComponent<Drawable>();
     root.addComponent<Transform>();
+    auto &light = root.addComponent<PointLight>();
     auto &m_c = root.addComponent<Material>();
-    m_c.diffuse_texture = texture;
+    m_c.diffuse_map = texture;
     m_c.program = basic;
+    light.position = {0, 4, -5};
+    light.ambient = light.diffuse = light.specular = {1,1,1};
+    light.coefs = {1, 0.0014, 0.00007};
+
 
     RenderSystem::submit();
     system_manager.init();
@@ -86,6 +91,7 @@ int main()
         Renderer::pushFrambuffer(fbo);
         Renderer::clearBuffers();
 
+        system_manager.predraw();
         system_manager.draw();
 
         Renderer::popFramebuffer();

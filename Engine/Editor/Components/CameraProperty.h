@@ -9,7 +9,7 @@ void InspectorDraw(Camera &camera)
     if (!opened)
         return;
 
-    const char const *items[Camera::Type::MAX] =
+    const char *items[Camera::Type::MAX] =
         {
             "ortho",
             "perspective",
@@ -31,6 +31,8 @@ void InspectorDraw(Camera &camera)
         ImGui::DragFloat("right", &camera.right);
         ImGui::DragFloat("top", &camera.top);
         ImGui::DragFloat("far", &camera.far);
+
+        ImGui::EndColumns();
     }
     else
     {

@@ -2,8 +2,9 @@
 
 #include "Shader.h"
 
+#include "Lighting/Lighting.h"
+#include "Core/Components/Material.h"
 #include <string>
-#include <glm/glm.hpp>
 
 class Program
 {
@@ -29,8 +30,47 @@ public:
 
     int getUniformLoc(const std::string &name) const;
 
-    void setMVP(const glm::mat4 &MVP) const { setMat4("MVP", MVP); }
+    void setMVP(const glm::mat4 &proj, const glm::mat4 &view, const glm::mat4 &model) const
+    {
+        setMat4("proj", proj);
+        setMat4("view", view);
+        setMat4("model", model);
+    }
     void setMVP(const glm::mat3 &MVP) const { setMat3("MVP", MVP); }
+
+    void setLight(const std::string &name, const PointLight &light) const
+    {
+        setVec3(name + ".position", light.position);
+        setVec3(name + ".diffuse", light.ambient);
+        setVec3(name + ".ambient", light.diffuse);
+        setVec3(name + ".specular", light.specular);
+        setVec3(name + ".coefs", light.coefs);
+    }
+
+    void setLight(const std::string &name, const DirLight &light) const
+    {
+        setVec3(name + ".direction", light.direction);
+        setVec3(name + ".diffuse", light.ambient);
+        setVec3(name + ".ambient", light.diffuse);
+        setVec3(name + ".specular", light.specular);
+    }
+
+    void setMaterial(const std::string &name, const Material &material) const
+    {
+        setInt(name + ".diffuse_map", 0);
+        setInt(name + ".specular_map", 1);
+
+        setVec3(name + ".color", material.color);
+        setFloat(name + ".shininess", material.shininess);
+        
+        if (material.diffuse_map)
+            material.diffuse_map->use();
+        if (material.specular_map)
+            material.specular_map->use();
+    }
+
+    void setInt(const std::string &name, int v) const;
+    void setFloat(const std::string &name, float v) const;
 
     template <typename T>
     void setScalar(const std::string &name, T v) const;

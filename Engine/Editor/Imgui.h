@@ -61,6 +61,20 @@ namespace Imgui
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }
 
+    bool centeredButton(const char *label, float alignment = 0.5f)
+    {
+        ImGuiStyle &style = ImGui::GetStyle();
+
+        float size = ImGui::CalcTextSize(label).x + style.FramePadding.x * 2.0f;
+        float avail = ImGui::GetContentRegionAvail().x;
+
+        float off = (avail - size) * alignment;
+        if (off > 0.0f)
+            ImGui::SetCursorPosX(ImGui::GetCursorPosX() + off);
+
+        return ImGui::Button(label);
+    }
+
     void vec3Control(const char *name, glm::vec3 &values, float speed = 0.1f, float reset_value = 0)
     {
         float column_width = 70.0f;

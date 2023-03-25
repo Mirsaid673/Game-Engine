@@ -15,5 +15,6 @@ struct Mesh
 
     std::vector<u32> indices;
 
-    std::string texture_path;
+    std::string diffuse_path;
+    std::string specular_path;
 };

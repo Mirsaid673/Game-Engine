@@ -8,6 +8,7 @@ class SystemManager
 private:
     std::list<System> init_systems;
     std::list<System> update_systems;
+    std::list<System> predraw_systems;
     std::list<System> draw_systems;
     std::list<System> destroy_systems;
 
@@ -27,6 +28,11 @@ public:
         draw_systems.emplace_back(s);
     }
 
+    void addPredraw(System s)
+    {
+        predraw_systems.emplace_back(s);
+    }
+
 //===================
     void init() const
     {
@@ -37,6 +43,12 @@ public:
     void update() const
     {
         for (auto system : update_systems)
+            system();
+    }
+
+    void predraw()
+    {
+        for (auto system : predraw_systems)
             system();
     }
 

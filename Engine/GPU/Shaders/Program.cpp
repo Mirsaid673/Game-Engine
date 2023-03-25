@@ -85,6 +85,16 @@ int Program::getUniformLoc(const std::string &name) const
     return glGetUniformLocation(id, name.c_str());
 }
 
+void Program::setInt(const std::string &name, int v) const
+{
+    glUniform1i(getUniformLoc(name), v);
+}
+
+void Program::setFloat(const std::string &name, float v) const
+{
+    glUniform1f(getUniformLoc(name), v);
+}
+
 template <>
 void Program::setScalar<int>(const std::string &name, int v) const
 {
