@@ -102,7 +102,7 @@ void Program::setScalar<int>(const std::string &name, int v) const
 }
 
 template <>
-void Program::setScalar<uint32_t>(const std::string &name, uint32_t v) const
+void Program::setScalar<u32>(const std::string &name, u32 v) const
 {
     glUniform1ui(getUniformLoc(name), v);
 }

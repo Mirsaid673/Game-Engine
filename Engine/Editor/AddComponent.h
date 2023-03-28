@@ -40,6 +40,13 @@ namespace Editor
                 ImGui::CloseCurrentPopup();
             }
 
+            if (ImGui::Button("SpotLight"))
+            {
+                if (not entity.hasComponent<SpotLight>())
+                    entity.addComponent<SpotLight>();
+                ImGui::CloseCurrentPopup();
+            }
+
             ImGui::EndPopup();
         }
     }

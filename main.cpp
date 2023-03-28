@@ -47,8 +47,9 @@ int main()
 
     Model m = Resource::loadModel("model.dae");
 
-    TextureHandle texture = gpu.createTexture("textures/" + m.meshes[0].diffuse_path, 4);
-    texture->filter(Filter::LINEAR_MIPMAP_LINEAR);
+    TextureHandle diffuse = gpu.createTexture("textures/" + m.meshes[0].diffuse_path, 4);
+    TextureHandle specular = gpu.createTexture("textures/" + m.meshes[0].specular_path, 4);
+    specular->setUnit(1);
 
     VertexArrayHandle screen_q = gpu.createVeretxArray();
     screen_q->linkIndexBuffer(gpu.createIndexBuffer(indices, sizeof(indices)));
@@ -62,16 +63,15 @@ int main()
     root.addComponent<Transform>();
     auto &light = root.addComponent<PointLight>();
     auto &m_c = root.addComponent<Material>();
-    m_c.diffuse_map = texture;
+    m_c.setDiffuse(diffuse);
+    m_c.setSpecular(specular);
     m_c.program = basic;
     light.position = {0, 4, -5};
-    light.ambient = light.diffuse = light.specular = {1,1,1};
+    light.ambient = light.diffuse = light.specular = {1, 1, 1};
     light.coefs = {1, 0.0014, 0.00007};
-
 
     RenderSystem::submit();
     system_manager.init();
-
     FramebufferHandle fbo = gpu.createFramebuffer(window.getWidth(), window.getHeight());
 
     while (not window.shouldClose())

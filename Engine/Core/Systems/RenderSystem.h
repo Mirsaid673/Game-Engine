@@ -19,18 +19,28 @@ namespace RenderSystem
         {
             material.program->use();
 
-            auto p_view = entity_manager.view<PointLight>();
-            u32 i = 0;
-            for (auto [entity, point_light] : p_view.each())
-            {
-                material.program->setLight("point_lights[" + std::to_string(i) + "]", point_light);
-                i++;
-            }
-            material.program->setScalar("point_lights_count", i);
-
             auto d_view = entity_manager.view<DirLight>();
             for (auto [entity, light] : d_view.each())
                 material.program->setLight("dir_light", light);
+
+            u32 point_lights_count = 0;
+            auto p_view = entity_manager.view<PointLight>();
+            for (auto [entity, point_light] : p_view.each())
+            {
+                material.program->setLight("point_lights[" + std::to_string(point_lights_count) + "]", point_light);
+                point_lights_count++;
+            }
+
+            u32 spot_lights_count = 0;
+            auto s_view = entity_manager.view<SpotLight>();
+            for (auto [entity, spot_light] : s_view.each())
+            {
+                material.program->setLight("spot_lights[" + std::to_string(spot_lights_count) + "]", spot_light);
+                spot_lights_count++;
+            }
+
+            material.program->setScalar("point_lights_count", point_lights_count);
+            material.program->setScalar("spot_lights_count", spot_lights_count);
 
             material.program->setMVP(scene.camera->getProjection(), scene.camera->getView(), transform.getMatrix());
             material.program->setMaterial("material", material);

@@ -35,10 +35,11 @@ namespace Resource
         return text;
     }
 
-    Image loadImage(const std::string &path)
+    Image loadImage(const std::string &path, bool flip)
     {
         Image image;
         int channels_n;
+        stbi_set_flip_vertically_on_load(flip);
         image.data = stbi_load(path.c_str(), (i32*)&image.width, (i32*)&image.height, &channels_n, 0);
         if (image.data == nullptr)
             Log::error("could not read file: \"{}\"", path);
@@ -62,7 +63,7 @@ namespace Resource
 
     Model loadModel(const std::string &path)
     {
-        scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenNormals | aiProcess_FlipUVs);
+        scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenNormals);
         if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
         {
             Log::error("could not load file: \"{}\"", path);

@@ -13,10 +13,14 @@ namespace Editor
     void newFrame();
     void endFrame();
 
+    void brawserInit();
+    void brawserCleanup();
+
     void drawTree();
     void drawScene(FramebufferHandle framebuffer);
     void drawInspector();
     void drawOutput();
+    void drawBrowser();
 
     void draw(FramebufferHandle fbo);
 

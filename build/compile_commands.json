@@ -16,8 +16,18 @@
 },
 {
   "directory": "/home/neron/Projects/3d game engine/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I\"/home/neron/Projects/3d game engine/Engine\" -I\"/home/neron/Projects/3d game engine/Engine/Core\" -I\"/home/neron/Projects/3d game engine/Engine/Editor\" -I\"/home/neron/Projects/3d game engine/Engine/GPU\" -I\"/home/neron/Projects/3d game engine/Engine/Math\" -I\"/home/neron/Projects/3d game engine/Engine/Platform\" -I\"/home/neron/Projects/3d game engine/Engine/Renderer\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/imgui\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/stb\" -g -std=gnu++17 -o CMakeFiles/out.dir/Engine/Editor/ContentBrowser.cpp.o -c \"/home/neron/Projects/3d game engine/Engine/Editor/ContentBrowser.cpp\"",
+  "file": "/home/neron/Projects/3d game engine/Engine/Editor/ContentBrowser.cpp"
+},
+{
+  "directory": "/home/neron/Projects/3d game engine/build",
   "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I\"/home/neron/Projects/3d game engine/Engine\" -I\"/home/neron/Projects/3d game engine/Engine/Core\" -I\"/home/neron/Projects/3d game engine/Engine/Editor\" -I\"/home/neron/Projects/3d game engine/Engine/GPU\" -I\"/home/neron/Projects/3d game engine/Engine/Math\" -I\"/home/neron/Projects/3d game engine/Engine/Platform\" -I\"/home/neron/Projects/3d game engine/Engine/Renderer\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/imgui\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/stb\" -g -std=gnu++17 -o CMakeFiles/out.dir/Engine/Editor/Editor.cpp.o -c \"/home/neron/Projects/3d game engine/Engine/Editor/Editor.cpp\"",
   "file": "/home/neron/Projects/3d game engine/Engine/Editor/Editor.cpp"
+},
+{
+  "directory": "/home/neron/Projects/3d game engine/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I\"/home/neron/Projects/3d game engine/Engine\" -I\"/home/neron/Projects/3d game engine/Engine/Core\" -I\"/home/neron/Projects/3d game engine/Engine/Editor\" -I\"/home/neron/Projects/3d game engine/Engine/GPU\" -I\"/home/neron/Projects/3d game engine/Engine/Math\" -I\"/home/neron/Projects/3d game engine/Engine/Platform\" -I\"/home/neron/Projects/3d game engine/Engine/Renderer\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/entt/src\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/imgui\" -I\"/home/neron/Projects/3d game engine/Engine/Vendor/stb\" -g -std=gnu++17 -o CMakeFiles/out.dir/Engine/Editor/Imgui.cpp.o -c \"/home/neron/Projects/3d game engine/Engine/Editor/Imgui.cpp\"",
+  "file": "/home/neron/Projects/3d game engine/Engine/Editor/Imgui.cpp"
 },
 {
   "directory": "/home/neron/Projects/3d game engine/build",

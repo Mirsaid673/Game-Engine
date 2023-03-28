@@ -5,14 +5,23 @@
 #include "Components/MeshProperty.h"
 #include "Components/CameraProperty.h"
 #include "Components/MaterialProperty.h"
-#include "Components/PointLightProperty.h"
 #include "Components/DirLightProperty.h"
+#include "Components/PointLightProperty.h"
+#include "Components/SpotLightProperty.h"
 #include "AddComponent.h"
 
 namespace Editor
 {
-    void init() { Imgui::init(window); }
-    void cleanup() { Imgui::cleanup(); }
+    void init()
+    {
+        Imgui::init(window);
+        brawserInit();
+    }
+    void cleanup()
+    {
+        Imgui::cleanup();
+        brawserCleanup();
+    }
     void newFrame() { Imgui::newFrame(); }
     void endFrame() { Imgui::endFrame(); }
 
@@ -141,6 +150,8 @@ namespace Editor
             InspectorDraw(*comp);
         if (auto comp = selected->tryGet<DirLight>(); comp != nullptr)
             InspectorDraw(*comp);
+        if (auto comp = selected->tryGet<SpotLight>(); comp != nullptr)
+            InspectorDraw(*comp);
 
         addComponent(*selected);
         ImGui::End();
@@ -160,6 +171,7 @@ namespace Editor
         drawTree();
         drawInspector();
         drawOutput();
+        drawBrowser();
         drawScene(fbo);
 
         Editor::endFrame();

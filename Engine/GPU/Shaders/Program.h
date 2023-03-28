@@ -41,8 +41,8 @@ public:
     void setLight(const std::string &name, const PointLight &light) const
     {
         setVec3(name + ".position", light.position);
-        setVec3(name + ".diffuse", light.ambient);
-        setVec3(name + ".ambient", light.diffuse);
+        setVec3(name + ".diffuse", light.diffuse);
+        setVec3(name + ".ambient", light.ambient);
         setVec3(name + ".specular", light.specular);
         setVec3(name + ".coefs", light.coefs);
     }
@@ -50,9 +50,21 @@ public:
     void setLight(const std::string &name, const DirLight &light) const
     {
         setVec3(name + ".direction", light.direction);
-        setVec3(name + ".diffuse", light.ambient);
-        setVec3(name + ".ambient", light.diffuse);
+        setVec3(name + ".diffuse", light.diffuse);
+        setVec3(name + ".ambient", light.ambient);
         setVec3(name + ".specular", light.specular);
+    }
+
+    void setLight(const std::string &name, const SpotLight &light) const
+    {
+        setVec3(name + ".position", light.position);
+        setVec3(name + ".direction", light.direction);
+        setVec3(name + ".diffuse", light.diffuse);
+        setVec3(name + ".ambient", light.ambient);
+        setVec3(name + ".specular", light.specular);
+        setVec3(name + ".coefs", light.coefs);
+        setFloat(name + ".cut_off", glm::cos(light.cut_off));
+        setFloat(name + ".outer_cut_off", glm::cos(light.outer_cut_off));
     }
 
     void setMaterial(const std::string &name, const Material &material) const
@@ -62,13 +74,15 @@ public:
 
         setVec3(name + ".color", material.color);
         setFloat(name + ".shininess", material.shininess);
-        
+        setInt(name + ".maps_mask", material.texture_mask.to_ulong());
+
         if (material.diffuse_map)
             material.diffuse_map->use();
         if (material.specular_map)
             material.specular_map->use();
     }
 
+    void setBool(const std::string &name, bool v) const;
     void setInt(const std::string &name, int v) const;
     void setFloat(const std::string &name, float v) const;
 
